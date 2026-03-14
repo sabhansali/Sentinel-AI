@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow AI Mapping</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="panel">
+    <header class="panel-header">
+      <h3>Latest Sanitizer Mapping</h3>
+      <p class="subtle">Original symbol -> anonymized id</p>
+    </header>
+
+    <section id="log" aria-live="polite"></section>
+
+    <button id="showMapping" type="button">Refresh Mapping</button>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
