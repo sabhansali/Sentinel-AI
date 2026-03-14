@@ -1,6 +1,8 @@
 from ai_risk_engine.detection.semantic_detector import check_semantic_risk
 from ai_risk_engine.detection.db_schema_detector import detect_db_schema_leak
 from ai_risk_engine.detection.pii_detector import detect_pii
+from ai_risk_engine.detection.secret_detector import detect_secrets
+# from ai_risk_engine.risk_measuring_engine.risk_aggregator import calculate_final_risk
 
 prompt = input("Enter prompt: ")
 
@@ -27,3 +29,20 @@ print("Risk score:",result["risk_score"])
 print("Entities detected:")
 for e in result["entities_detected"]:
     print("-",e)
+
+secret_result = detect_secrets(prompt)
+print("\nSecret Detection:")
+print("Risk score:",secret_result["risk_score"])
+for f in secret_result["findings"]:
+    print("-",f)
+
+# final = calculate_final_risk(
+#     similarity,
+#     result,
+#     db_result,
+#     secret_result
+
+# )
+# print("\nFINAL DECISION:")
+# print("Total risk:",final["total_risk"])
+# print("Decision:",final["decision"])

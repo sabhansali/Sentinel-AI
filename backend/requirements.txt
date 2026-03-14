@@ -11,3 +11,4 @@ presidio-analyzer
 presidio-anonymizer
 spacy
 phonenumbers
+detect-secrets
