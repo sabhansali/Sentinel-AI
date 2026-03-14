@@ -1,0 +1,22 @@
+FinSecure engineering workflow:
+
+Developers must not share:
+
+Internal source code
+Database schemas
+API structures
+Fraud detection logic
+
+AI tools must not be used with:
+
+Customer data
+Internal architecture
+Production code
+
+AI usage policy:
+
+All prompts must pass security review.
+
+Violations are logged.
+
+This document defines internal governance.

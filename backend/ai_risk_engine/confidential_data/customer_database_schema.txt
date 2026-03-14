@@ -1,0 +1,27 @@
+Internal database schema for FinSecure Payments.
+
+Table: internal_customer_db
+
+Columns:
+
+customer_id
+full_name
+email
+phone_number
+ssn
+aadhaar_number
+payment_history
+risk_score
+device_id
+account_status
+
+Table: transaction_logs
+
+transaction_id
+customer_id
+amount
+timestamp
+fraud_flag
+retry_count
+
+These schemas are confidential internal structures.

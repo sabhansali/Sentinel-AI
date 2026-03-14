@@ -1,0 +1,20 @@
+FinSecure risk scoring algorithm uses:
+
+Transaction velocity
+Payment failure rate
+Device switching frequency
+Geographic anomalies
+Transaction value deviation
+
+Risk score formula:
+
+Risk Score =
+(velocity_weight * transaction_frequency)
++
+(device_weight * device_changes)
++
+(amount_weight * abnormal_amounts)
+
+Scores above 75 are flagged as high risk.
+
+This scoring logic is proprietary.

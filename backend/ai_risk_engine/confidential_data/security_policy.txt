@@ -1,0 +1,17 @@
+Confidential data includes:
+
+Customer SSN
+Customer Aadhaar
+Payment tokens
+API keys
+Private endpoints
+Internal database names
+
+These must never be shared with external AI systems.
+
+Examples of secrets:
+
+API keys
+JWT tokens
+Private certificates
+Database passwords

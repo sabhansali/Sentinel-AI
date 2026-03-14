@@ -1,0 +1,23 @@
+FinSecure uses a proprietary payment retry mechanism to
+reduce failed transactions.
+
+Key techniques include:
+
+Exponential backoff retry logic
+Idempotency key generation
+Transaction state tracking
+Duplicate payment prevention
+
+Retry intervals:
+
+1st retry: 30 seconds
+2nd retry: 2 minutes
+3rd retry: 10 minutes
+
+Internal services:
+
+retry_orchestrator
+payment_state_manager
+failure_analysis_engine
+
+This retry logic is considered intellectual property.

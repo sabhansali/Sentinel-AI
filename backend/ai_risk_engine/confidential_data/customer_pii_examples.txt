@@ -1,0 +1,21 @@
+Sensitive customer records:
+
+Name: Rahul Sharma
+Email: rahul.sharma@finsecure.com
+Phone: 9876543210
+SSN: 456-78-9012
+Aadhaar: 4321-8765-1234
+
+Name: Anita Verma
+Email: anita.verma@finsecure.com
+Phone: 9123456780
+SSN: 896-45-8901
+Aadhaar: 9156-2348-6578
+
+Name: Daniya Kalra
+Email: daniya.kalra@finsecure.com
+Phone: 9356784567
+SSN: 234-34-7890
+Aadhaar: 6679-4568-6788
+
+This data is confidential.

@@ -1,0 +1,28 @@
+Internal APIs used in FinSecure.
+
+Fraud API:
+
+POST /internal/fraud-score
+
+Inputs:
+
+customer_id
+transaction_amount
+device_id
+
+Returns:
+
+risk_score
+fraud_probability
+
+Payment API:
+
+POST /internal/process-payment
+
+Inputs:
+
+customer_id
+amount
+payment_token
+
+These APIs are internal only.

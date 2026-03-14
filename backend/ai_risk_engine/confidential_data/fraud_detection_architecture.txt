@@ -1,0 +1,26 @@
+FinSecure Payments uses a proprietary fraud detection architecture
+based on behavioral analytics and transaction velocity scoring.
+
+The fraud pipeline contains:
+
+Transaction ingestion service
+Feature engineering module
+Device fingerprinting service
+Velocity scoring engine
+Risk classification model
+Alert generation service
+
+The velocity scoring engine tracks how many transactions
+a user performs within short time windows and assigns risk weights.
+
+The device fingerprinting system tracks:
+
+IP address
+Device ID
+Browser signature
+Location change patterns
+
+Fraud scores are calculated using an internal gradient boosting model
+trained on proprietary transaction data.
+
+This architecture is confidential and should not be shared externally.
