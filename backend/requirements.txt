@@ -16,3 +16,5 @@ detect-secrets
 streamlit
 python-dotenv
 google-generativeai
+plotly
+pandas

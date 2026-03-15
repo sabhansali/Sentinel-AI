@@ -3,6 +3,7 @@ import streamlit as st
 from ai_risk_engine.pipeline import analyze_prompt
 from ai_risk_engine.detection.ast_engine.engine import restore_names
 from ai_risk_engine.llm.gemini_client import ask_gemini
+from ai_risk_engine.data_tracker import record_analysis
 
 
 # ---------- SESSION STATE ----------
@@ -15,9 +16,30 @@ if "ai_response" not in st.session_state:
 if "safe_prompt" not in st.session_state:
     st.session_state.safe_prompt = None
 
+if "device_id" not in st.session_state:
+    st.session_state.device_id = "SYSTEM"
+
 
 # ---------- UI ----------
 st.title("SentinelAI Enterprise AI Security Gateway")
+
+with st.sidebar:
+    st.markdown("### 📱 Device Information")
+    st.session_state.device_id = st.text_input(
+        "Device ID (for analytics)",
+        value=st.session_state.device_id,
+        placeholder="e.g., ENG-LAPTOP-21"
+    )
+    
+    st.divider()
+    
+    st.markdown("### 📊 Dashboard")
+    st.markdown(
+        "**Run Admin Dashboard:**\n\n"
+        "```bash\n"
+        "streamlit run admin_dashboard.py\n"
+        "```"
+    )
 
 prompt = st.text_area("Enter Prompt or Code")
 
@@ -31,6 +53,9 @@ if st.button("Analyze Prompt"):
 
     st.session_state.analysis = analyze_prompt(prompt)
     st.session_state.ai_response = None
+    
+    # Record analysis for dashboard
+    record_analysis(st.session_state.analysis, st.session_state.device_id)
 
 result = st.session_state.analysis
 
