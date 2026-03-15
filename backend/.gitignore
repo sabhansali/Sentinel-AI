@@ -39,6 +39,7 @@ pip-wheel-metadata/
 .env
 .env.*
 !.env.example
+*.env
 
 # Local Python version file
 # Ignore this if each developer uses their own interpreter version manager.

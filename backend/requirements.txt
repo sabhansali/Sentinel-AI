@@ -13,3 +13,6 @@ presidio-anonymizer
 spacy
 phonenumbers
 detect-secrets
+streamlit
+python-dotenv
+google-generativeai

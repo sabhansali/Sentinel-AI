@@ -1,6 +1,6 @@
-from parser import parse_code
-from obfuscator import CodeObfuscator
-from mapper import ast_to_code
+from .parser import parse_code
+from .obfuscator import CodeObfuscator
+from .mapper import ast_to_code
 
 code = """
 

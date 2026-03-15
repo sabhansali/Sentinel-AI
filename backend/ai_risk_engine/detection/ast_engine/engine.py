@@ -19,6 +19,14 @@ def sanitize_code(code: str):
         "mapping": mapping
     }
 
+def restore_names(text: str, mapping: dict):
+    reverse = {v:k for k,v in mapping.items()}
+    for safe,original in reverse.items():
+        text = text.replace(safe,original)
+    return text
+    
+
+
 # Example usage (optional, for testing)
 if __name__ == "__main__":
     code = """
