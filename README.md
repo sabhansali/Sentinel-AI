@@ -148,7 +148,7 @@ The project does not directly use LangChain or TensorFlow. Hugging Face and PyTo
 ## Project Structure
 
 ```text
-ByteCamp/
+Sentinel-AI/
 ├── README.md
 ├── backend/
 │   ├── requirements.txt              # Python runtime dependencies
